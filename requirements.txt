@@ -1,0 +1,4 @@
+youtube-transcript-api
+langchain_chroma
+langchain 
+sentence-transformers
