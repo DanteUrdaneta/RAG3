@@ -10,7 +10,7 @@ documents = loader.load()
 
 
 # split it into chunks
-text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=0)
 docs = text_splitter.split_documents(documents)
 
 # create the open-source embedding function
@@ -20,7 +20,7 @@ embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2"
 db = Chroma.from_documents(docs, embedding_function)
 
 # query it
-query = "what does rag in langchain stand for?"
+query = "If you have it here it looks dorky?"
 docs = db.similarity_search(query)
 
 # print results

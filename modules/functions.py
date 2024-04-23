@@ -12,4 +12,4 @@ def getCaptions(videoID, filename):
             f.write(cap['text'] + '\n')
 
 
-getCaptions("sVcwVQRHIc8?si=cnUDn7H2k8p3s-6L", 'test.txt')
+getCaptions("TATblk1LUQI?si=8Sy84UdCCleDkiZV", 'test.txt')
