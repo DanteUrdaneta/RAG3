@@ -1,5 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
-import json
+import PIL as Image
+import pytesseract
 
 
 
@@ -11,5 +12,9 @@ def getCaptions(videoID, filename):
         for cap in caps:
             f.write(cap['text'] + '\n')
 
+def getImage(image):
+    img = Image.open(image)
+    return img
 
-getCaptions("TATblk1LUQI?si=8Sy84UdCCleDkiZV", 'test.txt')
+def getOCR(image):
+    return pytesseract.image_to_string(image)
